@@ -1,0 +1,25 @@
+{
+  "name": "minimessageboard",
+  "version": "1.0.0",
+  "description": "A mini message board using express and ejs to learn node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerinmt/minimessageboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jerinmt/minimessageboard/issues"
+  },
+  "homepage": "https://github.com/jerinmt/minimessageboard#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
