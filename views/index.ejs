@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include('navbar', {links: links}) %>
+    <h1>The Board of Messages</h1>
+    <div class="board">
+        <ul>
+            <% messages.forEach((message) => { %>
+            <%- include('messages', {message: message}); %>
+            <% }); %>
+        </ul>
+    </div>
+  </body>
+</html>

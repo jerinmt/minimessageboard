@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: rgb(216, 148, 3);
+    height: 40px;
+}
+nav ul {
+    font-size: large;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 30px;
+}
+h1 {
+    color: blueviolet;
+    text-align: center;
+}
+.board,
+form {
+    border: 5px solid rgb(143, 98, 2);
+    border-radius: 8px;
+    width: max-content;
+    margin: auto;
+    padding: 25px;
+}
+.board ul {
+    list-style: none;
+}
+.board li {
+    margin-bottom: 25px;
+}
+.userNames {
+    text-align: end;
+    font-weight: bold;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+label {
+    display: flex;
+}
