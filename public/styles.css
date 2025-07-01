@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: hsl(0, 100%, 20%);
+}
+body {
+    background-color: hsl(120, 25%, 50%);
 }
 nav {
-    background-color: rgb(216, 148, 3);
+    background-color: hsl(240, 100%, 50%);
     height: 40px;
 }
 nav ul {
@@ -15,12 +19,11 @@ nav ul {
     padding: 10px 30px;
 }
 h1 {
-    color: blueviolet;
     text-align: center;
 }
 .board,
 form {
-    border: 5px solid rgb(143, 98, 2);
+    border: 5px solid hsl(240, 100%, 50%);
     border-radius: 8px;
     width: max-content;
     margin: auto;
