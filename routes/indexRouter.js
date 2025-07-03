@@ -8,8 +8,7 @@ const links = [
 ];
 
 indexRouter.get("/", (req, res) => {
-  const currentMessages = db.getAllMessages();
-  const messages = Object.values(currentMessages);
+  const messages = db.getAllMessages();
   res.render("index", { links: links, messages: messages });
 });
 indexRouter.get("/new", (req, res) =>   res.render("form", { links: links }));
