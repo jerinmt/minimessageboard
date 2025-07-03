@@ -5,13 +5,13 @@ const { Client } = require("pg");
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  user VARCHAR(20) NOT NULL,
+  username VARCHAR(20) NOT NULL,
   message VARCHAR(255) NOT NULL,
   added TIMESTAMP WITHOUT TIME ZONE
 );`;
 const SQL2 = `
 INSERT INTO
-  messages (user, message)
+  messages (username, message)
 VALUES
   ('Jerin', 'Hi there!');
 `;
