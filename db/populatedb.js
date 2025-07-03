@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS messages (
 
 INSERT INTO messages (user, message) 
 VALUES
-  ('Jerin', 'Hi there!')
+  ('Jerin', 'Hi there!');
 `;
 
 async function main() {
