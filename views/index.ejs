@@ -6,15 +6,14 @@
   </head>
   <body>
     <%- include('navbar', {links: links}) %>
-    <% const result = Object.values(messages); %>
     <h1>The Board of Messages</h1>
     <div class="board">
         <ul>
-            <% result.forEach((message) => { %>
+            <% messages.forEach((message) => { %>
             <%- include('messages', {message: message}); %>
             <% }); %>
         </ul>
     </div>
-    <script>console.log(result)</script>
+    <script>console.log(messages)</script>
   </body>
 </html>
