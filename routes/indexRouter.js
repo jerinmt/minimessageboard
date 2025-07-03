@@ -8,12 +8,14 @@ const links = [
 ];
 
 indexRouter.get("/", (req, res) => {
-  const messages = db.getAllMessages();
-
-  res.render("index", { links: links, messages: messages.map(msg => ({
-    username: msg.username,
-    message: msg.message,
-    added: msg.added.toLocaleString(),})) });
+  const messages = db.getAllMessages().map((message) => {
+    return {
+      authorName: message.username,
+      newMessage: message.message,
+      addedDate: message.added.toLocaleString(),
+    };
+  });
+  res.render("index", { links: links, messages: messages });
 });
 indexRouter.get("/new", (req, res) =>   res.render("form", { links: links }));
 indexRouter.post("/new", (req, res) => {
