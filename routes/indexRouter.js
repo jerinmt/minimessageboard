@@ -8,13 +8,7 @@ const links = [
 ];
 
 indexRouter.get("/", (req, res) => {
-  const messages = db.getAllMessages().map((message) => {
-    return {
-      authorName: message.username,
-      newMessage: message.message,
-      addedDate: message.added.toLocaleString(),
-    };
-  });
+  const messages = db.getAllMessages();
   res.render("index", { links: links, messages: messages });
 });
 indexRouter.get("/new", (req, res) =>   res.render("form", { links: links }));
