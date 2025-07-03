@@ -13,7 +13,8 @@ const SQL2 = `
 INSERT INTO
   messages (username, message)
 VALUES
-  ('Jerin', 'Hi there!');
+  ('Jerin', 'Hi there!'),
+  ('Jerin', 'Enter your message here');
 `;
 
 async function main() {
