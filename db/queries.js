@@ -1,6 +1,6 @@
 const pool = require("./pool");
 
-async function getAllmessages() {
+async function getAllMessages() {
   const { rows } = await pool.query("SELECT * FROM messages");
   return rows;
 }
@@ -10,6 +10,6 @@ async function enterNewMessage(user, message, added) {
 }
 
 module.exports = {
-  getAllmessages,
+  getAllMessages,
   enterNewMessage
 };
