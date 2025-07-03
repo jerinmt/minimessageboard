@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS messages (
   user VARCHAR(20) NOT NULL,
   message VARCHAR(255) NOT NULL,
   added TIMESTAMP WITHOUT TIME ZONE
-);
+);`;
+const SQL2 = `
 INSERT INTO
   messages (user, message)
 VALUES
@@ -22,6 +23,7 @@ async function main() {
   });
   await client.connect();
   await client.query(SQL);
+  await client.query(SQL2);
   await client.end();
   console.log("done");
 }
