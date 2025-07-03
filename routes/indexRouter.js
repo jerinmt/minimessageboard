@@ -7,7 +7,7 @@ const links = [
   { href: "/", text: "Home" },
   { href: "new", text: "New" },
 ];
-
+console.log(messages);
 
 indexRouter.get("/", (req, res) => res.render("index", { links: links, messages: messages }));
 indexRouter.get("/new", (req, res) =>   res.render("form", { links: links }));
