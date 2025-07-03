@@ -7,7 +7,7 @@ const path = require("node:path");
 //initialisations
 const app = express();
 const assetsPath = path.join(__dirname, "public");
-
+require("dotenv").config();
 //static fiiles
 app.use(express.static(assetsPath));
 

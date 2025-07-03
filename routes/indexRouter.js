@@ -1,18 +1,8 @@
 const { Router } = require("express");
+const db = require("../db/queries");
 
 const indexRouter = Router();
-const messages = [
-    {
-        text: "Hi there!",
-        user: "Jerin",
-        added: new Date()
-    },
-    {
-        text: "Hello!",
-        user: "Akku",
-        added: new Date()
-    }
-];
+const messages = db.getAllMessages();
 const links = [
   { href: "/", text: "Home" },
   { href: "new", text: "New" },
@@ -24,7 +14,8 @@ indexRouter.get("/new", (req, res) =>   res.render("form", { links: links }));
 indexRouter.post("/new", (req, res) => {
     const authorName = req.body.authorName;
     const newMessage = req.body.newMessage;
-    messages.push({text: newMessage, user: authorName, added: new Date()});
+    const addedDate = new Date();
+    db.enterNewMessage(authorName, newMessage, addedDate);
     res.redirect("/");
 });
 
