@@ -20,5 +20,9 @@ indexRouter.post("/new", (req, res) => {
     db.enterNewMessage(authorName, newMessage, addedDate);
     res.redirect("/");
 });
+indexRouter.get("/delete", (req, res) => {
+    db.deleteAllEntries();
+    res.redirect("/");
+});
 
 module.exports = indexRouter;

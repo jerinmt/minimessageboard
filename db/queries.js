@@ -9,7 +9,13 @@ async function enterNewMessage(user, message, added) {
   await pool.query("INSERT INTO messages (username, message, added) VALUES ($1, $2, $3)", [user, message, added]);
 }
 
+async function deleteAllEntries() {
+  await pool.query("DROP TABLE IF EXISTS messages");
+}
+
+
 module.exports = {
   getAllMessages,
-  enterNewMessage
+  enterNewMessage,
+  deleteAllEntries
 };
