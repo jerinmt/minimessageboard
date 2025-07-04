@@ -5,14 +5,13 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <% console.log(messages) %>
     <%- include('navbar', {links: links}) %>
     <h1>The Board of Messages</h1>
     <div class="board">
         <ul>
-            <% messages.forEach((message) => { %>
-            <%- include('messages', {message: message}); %>
-            <% }); %>
+            <% for( let i = 0; i < messages.length; i++) { %>
+            <%- include('messages', {message: messages[i]}); %>
+            <% } %>
         </ul>
     </div>
   </body>
